@@ -85,6 +85,7 @@ a{
     border-radius: 50%;
     padding: 0.2rem;
     border: 1px solid #FF6B35;
+    transition: 3s ease-in-out linear;
 }
 .first-paragraph{
     font-size: 36px;
@@ -124,6 +125,8 @@ button:hover{
     border-radius: 14px;
     color: white;
     background-color: transparent;
+    width: max-content;
+    height: 50%;
 }
 .stats{
     height: fit-content;
@@ -174,6 +177,9 @@ button:hover{
 .small-text{
     font-size:14px;
     font-weight: 500;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
 .left-bottom{
     font-size: 45px;
@@ -306,6 +312,9 @@ cite{
     width: 100%;
     height: auto;
     aspect-ratio: 1/1;
+    transition: 1s ease-out;
+    border:1px solid #fa5e25;
+    border-radius: 10px;
     &:hover{
         transform:scale(0.95);
     };
