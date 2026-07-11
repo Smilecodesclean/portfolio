@@ -476,7 +476,7 @@ footer ul li{
     top: 67%;
     }
     .banner ul{
-    font-size:10px;
+    font-size: clamp(8px, 2vw, 14px);
     width:100%;
     padding-left:0;
     }
