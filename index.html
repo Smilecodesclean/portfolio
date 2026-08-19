@@ -10,91 +10,153 @@
 <body>
     <header id="home">
         <nav>
-            <p><i class="fa-solid fa-user" style="color: #e59524;"></i><span>John</span></p>
+            <p><i class="fa-solid fa-user" style="color: #2DD4A7;"></i><span>John</span></p>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutus">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contactus">Contact Us</a></li>
+                <li><a href="#aboutus">About</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contactus">Contact</a></li>
+                <li><a href="" class="get-started">Resume</a></li>
             </ul>
-            <a href="" class="get-started">Book a call</a>
         </nav>
         <div class="hero-section">
             <div class="hero-left">
                 <p class="first-paragraph">I'm John a</p>
                 <span> Front-end Developer</span>
-                <p class="last-paragraph">From intuitive UX/UI design to powerful full-stack development, 
-                    we create user-centered, high-performing digital products that engage users and drive 
-                    results.</p>
+                <p class="last-paragraph">who builds fast, accessible, user-focused web interfaces. I turn designs into clean, responsive code using HTML, CSS, JavaScript, and React</p>
 
                 <div class="bottom-button">
-                    <button class="get-started" onclick="window.location.href='#contactus'">Get Started</button>
-                    <button class="booking" onclick="window.location.href='#'">Book a Call</button>
-                </div>
-            </div>
-
-            <div class="hero-right">
-                <div class="left-stats stats">
-                    <b>5+</b>
-                    <p>Years Experience</p>
-                </div>
-                <img src="images/me.png" alt="mypic" class="myimg">
-                <div class="right-stats stats">
-                    <b>10+</b>
-                    <p>Projects Completed</p>
+                    <button class="get-started" onclick="window.location.href='#projects'">View My Work</button>
+                    <button class="booking" onclick="window.location.href='#'">Download Resume</button>
                 </div>
             </div>
         </div>
     </header>
     <div class="banner">
         <ul>
-            <li><i class="fa-solid fa-asterisk" style="color: #050505;" ></i></li>
+            <li><i class="fa-solid fa-asterisk" style="color: #2DD4A7;" ></i></li>
             <li>USABLE</li>
-            <li><i class="fa-solid fa-asterisk" style="color: #000000;" ></i></li>
+            <li><i class="fa-solid fa-asterisk" style="color: #2DD4A7;" ></i></li>
             <li>RELIABLE</li>
-            <li><i class="fa-solid fa-asterisk" style="color: #000000;" ></i></li>
+            <li><i class="fa-solid fa-asterisk" style="color: #2DD4A7;" ></i></li>
             <li>ACCESSIBLE</li>
-            <li><i class="fa-solid fa-asterisk" style="color: #000000;" ></i></li>
+            <li><i class="fa-solid fa-asterisk" style="color: #2DD4A7;" ></i></li>
             <li>INTERACTIVE</li>
-            <li><i class="fa-solid fa-asterisk" style="color: #000000;" ></i></li>
+            <li><i class="fa-solid fa-asterisk" style="color: #2DD4A7;" ></i></li>
             <li>CLARITY</li>
-            <li><i class="fa-solid fa-asterisk" style="color: #000000;" ></i></li>
+            <li><i class="fa-solid fa-asterisk" style="color: #2DD4A7;" ></i></li>
             <li>CONSISTENCY</li>
-            <li><i class="fa-solid fa-asterisk" style="color: #000000;" ></i></li>
+            <li><i class="fa-solid fa-asterisk" style="color: #2DD4A7;" ></i></li>
         </ul>
     </div>
-<section id="services">
-    <div class="service-top">
-        <div class="service-left">
-            <p class="small-text">Services I Provide</p>
-            <p class="left-bottom">Innovative solutions in design and development</p>
-        </div>
-        <div class="service-right">
-            <p class="right-top">I work with businesses to shape their vision into meaningful digital experiences that inspire and perform. From concept to launch,
-                 I focus on creating products that are both beautiful and built to last.</p>
-            <a href="#services" class="right-bottom get-started">View All Services</a>
-        </div>
+    <section id="projects">
+    <div class="project-head">
+        <p class="small-text psmall">SELECTED WORK</p>
+        <p class="big-head">Projects</p>
     </div>
-    <div class="service-bottom">
-        <div class="service-card">
-            <i class="fa-solid fa-gears" style="color: #ce961c;"></i>
-            <h4>Website Design</h4>
-            <p> We create visually stunning, user-friendly websites that reflect your brand's identity
-                 and engage your audience </p>
-            <div class="small-text"><a href="#" >Learn More</a><i class="fa-solid fa-arrow-right" style="color: rgb(255, 212, 59);"></i></div>
+        <div class="project-view">
+            <div class="project-card">
+                <img src="images/contact.png" alt="Contact form screenshot" loading="lazy">
+                <div class="project-info">
+                    <div class="info-title">
+                        <h3>Contact Form</h3>
+                        <span>Frontend Mentor</span>
+                    </div>
+                    <p>A Frontend Mentor challenge focused on accessible form validation, required fields, inline error states, and a confirmation toast on submit.</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <div class="buttons">
+                        <a href="https://contactform-black.vercel.app/" target="_blank" class="live-demo demo">Live Demo</a>
+                        <a href="https://github.com/akanijohnpraise/contact-form" target="_blank" class="github demo">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/social.png" alt="Social hub screenshot" loading="lazy">
+                <div class="project-info">
+                    <div class="info-title">
+                        <h3>Social Hub</h3>
+                        <span>Personal</span>
+                    </div>
+                    <p>A minimal link-in-bio profile page, clean typography and layout with zero unnecessary dependencies.</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    <div class="buttons">
+                        <a href="https://socialhub-olive.vercel.app/" target="_blank" class="live-demo demo">Live Demo</a>
+                        <a href="https://github.com/akanijohnpraise/social-hub" target="_blank" class="github demo">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/ticket.png" alt="Ticket management app screenshot" loading="lazy">
+                <div class="project-info">
+                    <div class="info-title">
+                        <h3>Ticket Management App</h3>
+                        <span>Personal</span>
+                    </div>
+                    <p>A React-based ticket tracking system handling creation, status updates, and list management with component-driven state.</p>
+                    <ul>
+                        <li>CSS</li>
+                        <li>React</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <div class="buttons">
+                        <a href="https://ticket-web-app-react-three.vercel.app/" target="_blank" class="live-demo demo">Live Demo</a>
+                        <a href="https://github.com/akanijohnpraise/ticket-management-app" target="_blank" class="github demo">GitHub</a>
+                    </div>
+                </div>
+            </div>
         </div>
-         <div class="service-card">
-            <i class="fa-solid fa-code" style="color: #e57e2a;"></i>
-            <h4>Frontend development</h4>
-            <p> From front-end, we build powerful, scalable digital products using the latest technologies.</p>
-            <div class="small-text"><a href="#" >Learn More</a><i class="fa-solid fa-arrow-right" style="color: rgb(255, 212, 59);"></i></div>
+</section>
+<section id="skills-section">
+    <div class="skills-header">
+         <p class="skills-eyebrow">WHAT I WORK WITH</p>
+         <h2 class="skills-head">Tools &amp; Technologies</h2>
+         <p class="skills-sub">The languages, frameworks, and tools I use to build interfaces that are fast, accessible, and easy to maintain.</p>
+    </div>
+    <div class="skill-grid">
+        <div class="languages">
+            <p>LANGUAGES &amp; CORE</p>
+            <div class="pill">
+                <i class="fa-brands fa-html5" style="color: #2DD4A7;"></i>
+                <span>HTML</span>
+            </div>
+             <div class="pill">
+                <i class="fa-brands fa-css3-alt" style="color: #2DD4A7;"></i>
+                <span>CSS</span>
+            </div>
+             <div class="pill">
+                <i class="fa-brands fa-js" style="color: #2DD4A7;"></i>
+                <span>JavaScript</span>
+            </div>
         </div>
-         <div class="service-card">
-            <i class="fa-solid fa-screwdriver-wrench" style="color: #d6931f;"></i>
-            <h4>Performance Optimization</h4>
-            <p>Enhancing site speed, responsiveness, and user experience. </p>
-            <div class="small-text"><a href="#" >Learn More</a><i class="fa-solid fa-arrow-right" style="color: rgb(255, 212, 59);"></i></div>
+        <div class="frameworks">
+            <p>FRAMEWORKS &amp; LIBRARIES</p>
+            <div class="pill">
+                <i class="fa-brands fa-react" style="color: #2DD4A7;"></i>
+                <span>React</span>
+            </div>
+        </div>
+        <div class="tools">
+            <p>TOOLS &amp; WORKFLOWS</p>
+            <div class="pill">
+                <i class="fa-brands fa-git-alt" style="color: #2DD4A7;"></i>
+                <span>Git/Github</span>
+            </div>
+            <div class="pill">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <span>Vercel</span>
+            </div>
+            <div class="pill">
+                <i class="fa-brands fa-css3-alt" style="color: #2DD4A7;"></i>
+                <span>Responsive Design</span>
+            </div>
         </div>
     </div>
 </section>
@@ -106,60 +168,28 @@
         <p class="lefth3 hover">User Experience</p>
     </div>
     <div class="about-right">
-        <p class="small-text">About Me</p>
-        <h3 class="about-second">Who is John Praise ?</h3>
-        <cite>"Empowering Businesses with Innovative Web Design and Development Solutions"</cite>
-        <p class="about-bottom">Hi, I'm John Praise, a passionate front-end developer dedicated to transforming ideas into visually compelling 
-            and user-focused experiences. I bring creativity, precision, and a keen eye for detail to every project I craft.</p>
+        <h3 class="about-second">About Me</h3>
+        <p class="about-bottom">I'm a frontend developer with a background in Computer Science, currently building freelance web projects and personal tools with HTML, CSS, JavaScript, and React. I like turning rough designs into interfaces that actually feel good to use, clean structure, fast load times, no unnecessary complexity. Outside of client work, I've been exploring Linux/networking, Web3 front-ends to keep building things I'm curious about</p>
         <div class="about-contact">
         <div class="about-con-down">
-            <i class="fa-regular fa-envelope" style="color: #ec8532;"></i>
+            <i class="fa-regular fa-envelope" style="color: #2DD4A7;"></i>
             <div class="inner">
-                <p class="inner-top">Email Us At</p>
+                <p class="inner-top">Email Me At</p>
                 <p class="inner-bottom">akanijohnpraise@gmail.com</p>
             </div>
         </div>
-         <div class="about-con-down">
-            <i class="fa-solid fa-phone" style="color: #e59524;"></i>
-            <div class="inner">
-                <p class="inner-top">Phone Number</p>
-                <p class="inner-bottom">+2348119797184</p>
-            </div>
-        </div>
         </div>
     </div>
 </section>
-<section id="projects">
-    <div class="project-head">
-        <p class="small-text psmall">What I Created</p>
-        <p class="big-head">My Latest Projects</p>
-    </div>
-        <div class="project-view">
-            <a href="#"><img src="images/ecommerce.png" alt="project1"></a>
-            <a href="https://contactform-black.vercel.app/"><img src="images/contact.png" alt="project2"></a>
-            <a href="https://johnn-cyber.github.io/sunnyside-agency/"><img src="images/sunnyside.png" alt="project3"></a>
-            <a href="https://socialhub-olive.vercel.app/"><img src="images/social.png" alt="project4"></a>
-            <a href="https://ticket-web-app-react-three.vercel.app/"><img src="images/ticket.png" alt="project4"></a>
-        </div>
-</section>
-<section id="contactus">
+ <section id="contactus">
     <div class="contact-left">
-        <p class="small-text csmall">Contact Us</p>
-        <p class="contact-top">Get in touch to discuss your next project!</p>
-        <p class="contact-middle">Are you ready to take your project to the next level?
-             Whether you're looking for sleek website or advanced custom application, I'm here to help.</p>
+        <h2 class="small-text csmall">Let's Talk</h2>
+        <p class="contact-middle">If you're hiring for a frontend role — or have a project you'd like help with — I'd love to hear from you. Fill out the form below or email me directly.</p>
         <div class="contact-email">
-            <i class="fa-regular fa-envelope" style="color: #ec8532;"></i>
+            <i class="fa-regular fa-envelope" style="color: #2DD4A7;"></i>
             <div class="inner">
-                <p class="inner-top">Email Us At</p>
+                <p class="inner-top">Email Me At</p>
                 <p class="inner-bottom">akanijohnpraise@gmail.com</p>
-            </div>
-        </div>
-        <div class="contact-email">
-            <i class="fa-solid fa-phone" style="color: #e59524;"></i>
-            <div class="inner">
-                <p class="inner-top">Phone Number</p>
-                <p class="inner-bottom">+2348119797184</p>
             </div>
         </div>
     </div>
@@ -179,33 +209,38 @@
         <button type="submit" id="submit-button" class="get-started">Submit Message</button>
         <p id="form-status" style="display:none"></p>
     </form>
-</section>
-<footer>
-    <h1>READY TO WORK WITH US</h1>
-    <p>Let's collaborate to turn your vision into beautiful, functional designs that make an impact.</p>
-    <hr class="thin-line">
+ </section>
+<section class="cta-strip">
+  <h2 class="cta-heading">Let's build something worth shipping</h2>
+  <p class="cta-sub">
+    Open to remote frontend roles and select freelance projects.
+  </p>
+    </section>
+    <footer>
     <div class="footer-nav">
         <div class="first-nav">
-            <p>Useful Links</p>
+            <p>JOHN</p>
+            <span class="about-bottom">Frontend developer building clean,<br> accessible interfaces</span>
+        </div>
+        <div class="first-nav">
+            <p>NAVIGATE</p>
             <ul>
-                <li><a href="#aboutus">About Us</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#aboutus">About</a></li>
+                <li><a href="#services">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a></a></li>
             </ul>
         </div>
         <div class="first-nav">
-            <p>Social Links</p>
+            <p>CONNECT</p>
             <div class="link-icon">
-                <a href="https://github.com/Johnn-cyber" target="_blank"><i class="fab fa-github" style="color: #e59524;"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100074962647999" target="_blank"><i class="fab fa-facebook-f" style="color: #e59524;"></i></a>
-                <a href="mailto:akanijohnpraise@gmail.com"><i class="fas fa-envelope" style="color: #e59524;"></i></a>
-                <a href="https://www.linkedin.com/in/akani-johnpraise-97221222b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in" style="color: #e59524;"></i></a>
-                 <a href="https://x.com/Booogeeymann?t=eiMcymYNeVHpNqe-dkLdVA&s=09" target="_blank"><i class="fab fa-x-twitter" style="color: #e59524;"></i></a>
-                 <a href="https://www.instagram.com/boooogeeyman?igsh=MWoyZ29kbDQzY3B5Mg==" target="_blank"><i class="fab fa-instagram" style="color: #e59524;"></i></a>
+                <a href="https://github.com/Smilecodesclean" target="_blank"><i class="fab fa-github" style="color: #2DD4A7;"></i></a>
+                <a href="mailto:akanijohnpraise@gmail.com"><i class="fas fa-envelope" style="color: #2DD4A7;"></i></a>
+                <a href="https://www.linkedin.com/in/akani-johnpraise-97221222b" target="_blank"><i class="fab fa-linkedin-in" style="color: #2DD4A7;"></i></a>
+                 <a href="https://x.com/Devgrid_?t=eiMcymYNeVHpNqe-dkLdVA&s=09" target="_blank"><i class="fab fa-x-twitter" style="color: #2DD4A7;"></i></a>
             </div>
         </div>
     </div>
-    <hr class="thin-line">
     <p class="ending">© 2025 John Praise | All Rights Reserved</p>
 </footer>
 
