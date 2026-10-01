@@ -11,7 +11,8 @@
     <header id="home">
         <nav>
             <p><i class="fa-solid fa-user" style="color: #2DD4A7;"></i><span>John</span></p>
-            <ul>
+            <img src="./images/hamburger.svg" alt="harmbuger menu" class="hambuger"/>
+            <ul class="nav-list">
                 <li><a href="#aboutus">About</a></li>
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#contactus">Contact</a></li>
@@ -69,7 +70,7 @@
                     </ul>
                     <div class="buttons">
                         <a href="https://contactform-black.vercel.app/" target="_blank" class="live-demo demo">Live Demo</a>
-                        <a href="https://github.com/akanijohnpraise/contact-form" target="_blank" class="github demo">GitHub</a>
+                        <a href="https://github.com/Smilecodesclean/contact-form" target="_blank" class="github demo">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -88,7 +89,7 @@
                     </ul>
                     <div class="buttons">
                         <a href="https://socialhub-olive.vercel.app/" target="_blank" class="live-demo demo">Live Demo</a>
-                        <a href="https://github.com/akanijohnpraise/social-hub" target="_blank" class="github demo">GitHub</a>
+                        <a href="https://github.com/Smilecodesclean/social-hub" target="_blank" class="github demo">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -107,8 +108,8 @@
                         <li>JavaScript</li>
                     </ul>
                     <div class="buttons">
-                        <a href="https://ticket-web-app-react-three.vercel.app/" target="_blank" class="live-demo demo">Live Demo</a>
-                        <a href="https://github.com/akanijohnpraise/ticket-management-app" target="_blank" class="github demo">GitHub</a>
+                        <a href="https://ticketing-app-bice-beta.vercel.app/" target="_blank" class="live-demo demo">Live Demo</a>
+                        <a href="https://github.com/Smilecodesclean/ticketing-app" target="_blank" class="github demo">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -207,7 +208,7 @@
         <input type="text" name="_gotcha" style="display:none" />
         <input type="hidden" name="_subject" value="New message from your portfolio" />
         <button type="submit" id="submit-button" class="get-started">Submit Message</button>
-        <p id="form-status" style="display:none"></p>
+        <span id="form-status" style="display:none"></span>
     </form>
  </section>
 <section class="cta-strip">
@@ -245,25 +246,69 @@
 </footer>
 
 <script>
-  document.getElementById('contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const status = document.getElementById('form-status');
+    const hambuger =  document.querySelector('.hambuger');
+    const nav =  document.querySelector('.nav-list');
 
-    const res = await fetch('https://formspree.io/f/meedonba', {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
+    hambuger.addEventListener('click', ()=>{
+        nav.style.display = "flex";
+    })
 
-    status.style.display = 'block';
-    if (res.ok) {
-      form.reset();
-      status.textContent = 'Message sent! I\'ll get back to you soon.';
-    } else {
-      status.textContent = 'Something went wrong. Please try again.';
-    }
-  });
+    nav.addEventListener('click', ()=>{
+        if(window.innerWidth <768){
+        nav.style.display = "none";
+        }
+    })
+    window.addEventListener('resize', ()=>{
+        if(window.innerWidth >=768){
+            nav.style.display = "flex";
+        }else{
+            nav.style.display = "none";
+        }
+    })
+    const submitForm =  document.getElementById('contact-form');
+    const submitButton = document.getElementById('submit-button');
+    submitForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const status = document.getElementById('form-status');
+        const fields = form.querySelectorAll(
+            'input:not([type="hidden"]):not([type="submit"]):not([name="_gotcha"]), textarea'
+        );
+        const isEmpty = [...fields].some(f => f.value.trim() === '');
+
+        status.style.display = 'flex';
+             if (isEmpty) {
+                status.textContent = 'Please fill all fields.';
+                status.style.color = 'red';
+                return;
+             }
+
+        try {
+            submitButton.disabled = true;
+            submitButton.style.cursor = "not-allowed";
+            const res = await fetch('https://formspree.io/f/meedonba', {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+            });
+            
+                if (res.ok) {
+                    form.reset();
+                    status.textContent = "Message sent! I'll get back to you soon.";
+                    status.style.color = 'green';
+                } else {
+                    status.textContent = 'Something went wrong. Please try again.';
+                    status.style.color = 'red';
+                }
+        } catch (err) {
+            status.textContent = 'Network error. Please try again.';
+            status.style.color = 'red';
+        }finally{
+            submitButton.disabled = false;
+            submitButton.style.cursor = "pointer";
+        }
+});
+   
   let time = new Date().getFullYear();
   document.querySelector('.ending').textContent = `© ${time} John Praise | All Rights Reserved`;        
 </script>
