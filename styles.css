@@ -68,11 +68,27 @@ nav ul{
 }
 .hambuger{
     display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.nav-close{
+    display: none;
+}
+.close-menu{
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
 }
 body, p, a, li, input, textarea, button, .demo, .get-started, .booking {
     font-family: var(--font-body);
 }
-h1, h2, h3, .first-paragraph, .hero-left span, .about-second, .big-head, .cta-heading {
+h1, h2, h3, .first-paragraph, .hero-left span, .hero-title, .about-second, .big-head, .cta-heading {
     font-family: var(--font-heading);
     letter-spacing: -0.02em;
 }
@@ -108,12 +124,6 @@ a{
     flex-direction: column;
     gap: 0.5rem;
 }
-.hero-right{
-    justify-content: center;
-    align-self: center;
-    display: flex;
-    position: relative;
-}
 .myimg{
     width: 20rem;
     height: auto;
@@ -121,7 +131,7 @@ a{
     border-radius: 50%;
     padding: 0.2rem;
     border: 1px solid var(--border-subtle);
-    transition: 3s ease-in-out linear;
+    transition: border-color 0.3s ease;
     &:hover{
         border: 1px solid var(--accent);
     }
@@ -133,9 +143,11 @@ a{
     margin-bottom: 0;
     color: var(--text-primary);
 }
-.hero-left span{
+.hero-left span,
+.hero-title{
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 400;
+    margin: 0;
     color: var(--accent);
 }
 .last-paragraph{
@@ -167,6 +179,13 @@ button:hover{
     background-color: transparent;
     width: max-content;
     height: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-out;
+}
+.booking:hover{
+    transform: scale(0.95);
 }
 #skills-section{
     margin: 1rem 4rem 4rem;
@@ -269,11 +288,6 @@ button:hover{
     font-size: clamp(2.5rem, 2.5vw, 3.5rem);
     font-weight:700;
     color: var(--text-primary);
-}
-cite{
-    text-decoration:italic;
-    font-size:16px;
-    color: var(--text-secondary);
 }
 .about-bottom{
     font-size: clamp(0.9375rem, 2.5vw, 1rem);
@@ -414,7 +428,7 @@ cite{
 .inner p{
     margin:0;
     padding: 0;
-    font-family: 'Times new roman', sans-serif;
+    font-family: var(--font-body);
     color: var(--text-primary);
 }
 form{
@@ -544,7 +558,12 @@ footer ul li{
         background-color: var(--bg-primary);
     }
     .hambuger{
-    display: inline;
+        display: inline-block;
+    }
+    .nav-close{
+        display: block;
+        align-self: flex-end;
+        padding-right: 2rem;
     }
     header{
         padding: 1rem 2rem;
@@ -564,18 +583,6 @@ footer ul li{
     .bottom-button{
         padding-top:0.5rem;
         padding-bottom:0.5rem;
-    }
-    #services{
-        padding:2rem;
-    }
-    .service-top{
-        display:flex;
-        flex-direction:column;
-        gap:1rem;
-    }
-    .service-bottom{
-        display:flex;
-        flex-direction:column;
     }
     .buttons{
     display: flex;

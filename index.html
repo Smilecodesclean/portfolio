@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.jfif">
+    <link rel="icon" type="image/jpeg" href="images/favicon.jfif">
     <title>Akani John Praise | Frontend Developer</title>
 </head>
 <body>
     <header id="home">
         <nav>
             <p><i class="fa-solid fa-user" style="color: #2DD4A7;"></i><span>John</span></p>
-            <img src="./images/hamburger.svg" alt="harmbuger menu" class="hambuger"/>
+            <button type="button" class="hambuger" aria-label="Open menu" aria-expanded="false"><img src="./images/hamburger.svg" alt=""></button>
             <ul class="nav-list">
+                <li class="nav-close"><button type="button" class="close-menu" aria-label="Close menu">&times;</button></li>
                 <li><a href="#aboutus">About</a></li>
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#contactus">Contact</a></li>
@@ -23,12 +24,12 @@
         <div class="hero-section">
             <div class="hero-left">
                 <p class="first-paragraph">I'm John a</p>
-                <span> Front-end Developer</span>
+                <h1 class="hero-title">Front-end Developer</h1>
                 <p class="last-paragraph">who builds fast, accessible, user-focused web interfaces. I turn designs into clean, responsive code using HTML, CSS, JavaScript, and React</p>
 
                 <div class="bottom-button">
                     <button class="get-started" onclick="window.location.href='#projects'">View My Work</button>
-                    <button class="booking" onclick="window.location.href='John_Praise_Akani_Resume.pdf'">Download Resume</button>
+                    <a href="John_Praise_Akani_Resume.pdf" download class="booking">Download Resume</a>
                 </div>
             </div>
         </div>
@@ -70,8 +71,8 @@
                         <li>JavaScript</li>
                     </ul>
                     <div class="buttons">
-                        <a href="https://contactform-black.vercel.app/" target="_blank" class="live-demo demo">Live Demo</a>
-                        <a href="https://github.com/Smilecodesclean/contact-form" target="_blank" class="github demo">GitHub</a>
+                        <a href="https://contactform-black.vercel.app/" target="_blank" rel="noopener noreferrer" class="live-demo demo">Live Demo</a>
+                        <a href="https://github.com/Smilecodesclean/contact-form" target="_blank" rel="noopener noreferrer" class="github demo">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -89,8 +90,8 @@
                         <li>CSS</li>
                     </ul>
                     <div class="buttons">
-                        <a href="https://socialhub-olive.vercel.app/" target="_blank" class="live-demo demo">Live Demo</a>
-                        <a href="https://github.com/Smilecodesclean/social-hub" target="_blank" class="github demo">GitHub</a>
+                        <a href="https://socialhub-olive.vercel.app/" target="_blank" rel="noopener noreferrer" class="live-demo demo">Live Demo</a>
+                        <a href="https://github.com/Smilecodesclean/social-hub" target="_blank" rel="noopener noreferrer" class="github demo">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -109,8 +110,8 @@
                         <li>JavaScript</li>
                     </ul>
                     <div class="buttons">
-                        <a href="https://ticketing-app-bice-beta.vercel.app/" target="_blank" class="live-demo demo">Live Demo</a>
-                        <a href="https://github.com/Smilecodesclean/ticketing-app" target="_blank" class="github demo">GitHub</a>
+                        <a href="https://ticketing-app-bice-beta.vercel.app/" target="_blank" rel="noopener noreferrer" class="live-demo demo">Live Demo</a>
+                        <a href="https://github.com/Smilecodesclean/ticketing-app" target="_blank" rel="noopener noreferrer" class="github demo">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -152,7 +153,7 @@
                 <span>Git/Github</span>
             </div>
             <div class="pill">
-                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <i class="fa-solid fa-cloud-arrow-up" style="color: #2DD4A7;"></i>
                 <span>Vercel</span>
             </div>
             <div class="pill">
@@ -198,18 +199,18 @@
     <form id="contact-form">
         <p class="form-top">Fill out the form below to connect with me. I will get back to you</p>
         <fieldset class="name">
-            <input type="text" placeholder="First Name" name="first-name">
-            <input type="text" placeholder="Last Name" name="last-name">
+            <input type="text" placeholder="First Name" name="first-name" aria-label="First name" autocomplete="given-name">
+            <input type="text" placeholder="Last Name" name="last-name" aria-label="Last name" autocomplete="family-name">
         </fieldset>
         <fieldset class="details">
-            <input type="email" placeholder="Email" name="email">
-            <input type="tel" placeholder="Phone Number" name="phone-number">
+            <input type="email" placeholder="Email" name="email" aria-label="Email" autocomplete="email">
+            <input type="tel" placeholder="Phone Number" name="phone-number" aria-label="Phone number" autocomplete="tel">
         </fieldset>
-        <textarea cols="30" rows="8" placeholder="Message" name="message"></textarea>
-        <input type="text" name="_gotcha" style="display:none" />
+        <textarea cols="30" rows="8" placeholder="Message" name="message" aria-label="Message"></textarea>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <input type="hidden" name="_subject" value="New message from your portfolio" />
         <button type="submit" id="submit-button" class="get-started">Submit Message</button>
-        <span id="form-status" style="display:none"></span>
+        <span id="form-status" role="status" aria-live="polite" style="display:none"></span>
     </form>
  </section>
 <section class="cta-strip">
@@ -228,18 +229,18 @@
             <p>NAVIGATE</p>
             <ul>
                 <li><a href="#aboutus">About</a></li>
-                <li><a href="#services">Skills</a></li>
+                <li><a href="#skills-section">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contactus">Contact</a></li>
             </ul>
         </div>
         <div class="first-nav">
             <p>CONNECT</p>
             <div class="link-icon">
-                <a href="https://github.com/Smilecodesclean" target="_blank"><i class="fab fa-github" style="color: #2DD4A7;"></i></a>
+                <a href="https://github.com/Smilecodesclean" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" style="color: #2DD4A7;"></i></a>
                 <a href="mailto:akanijohnpraise@gmail.com"><i class="fas fa-envelope" style="color: #2DD4A7;"></i></a>
-                <a href="https://www.linkedin.com/in/akani-johnpraise-97221222b" target="_blank"><i class="fab fa-linkedin-in" style="color: #2DD4A7;"></i></a>
-                 <a href="https://x.com/Devgrid_?t=eiMcymYNeVHpNqe-dkLdVA&s=09" target="_blank"><i class="fab fa-x-twitter" style="color: #2DD4A7;"></i></a>
+                <a href="https://www.linkedin.com/in/akani-johnpraise-97221222b" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" style="color: #2DD4A7;"></i></a>
+                 <a href="https://x.com/Devgrid_" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter" style="color: #2DD4A7;"></i></a>
             </div>
         </div>
     </div>
@@ -247,25 +248,24 @@
 </footer>
 
 <script>
-    const hambuger =  document.querySelector('.hambuger');
-    const nav =  document.querySelector('.nav-list');
+    const hambuger = document.querySelector('.hambuger');
+    const nav = document.querySelector('.nav-list');
+    const closeMenu = document.querySelector('.close-menu');
+    const mobileQuery = window.matchMedia('(max-width: 726px)');
 
-    hambuger.addEventListener('click', ()=>{
-        nav.style.display = "flex";
-    })
+    function setNav(open) {
+        nav.style.display = open ? 'flex' : 'none';
+        hambuger.setAttribute('aria-expanded', String(open));
+    }
 
-    nav.addEventListener('click', ()=>{
-        if(window.innerWidth <726){
-        nav.style.display = "none";
-        }
-    })
-    window.addEventListener('resize', ()=>{
-        if(window.innerWidth >=726){
-            nav.style.display = "flex";
-        }else{
-            nav.style.display = "none";
-        }
-    })
+    hambuger.addEventListener('click', () => setNav(true));
+    closeMenu.addEventListener('click', () => setNav(false));
+    nav.addEventListener('click', () => {
+        if (mobileQuery.matches) setNav(false);
+    });
+    // Only fires when crossing the breakpoint, not on mobile address bar resizes
+    mobileQuery.addEventListener('change', (e) => setNav(!e.matches));
+
     const submitForm =  document.getElementById('contact-form');
     const submitButton = document.getElementById('submit-button');
     submitForm.addEventListener('submit', async (e) => {
